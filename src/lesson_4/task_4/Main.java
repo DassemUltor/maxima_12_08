@@ -14,7 +14,7 @@ public class Main {
         int sum = 0;
         int number;
 
-        System.out.println("Insert numbers: ");
+        System.out.println("Input numbers: ");
 
         do {
             number = Integer.parseInt(console.nextLine());

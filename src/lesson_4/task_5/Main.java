@@ -13,10 +13,9 @@ public class Main {
             int j = 1;
 
             while (j <= 10) {
-                System.out.print((i * j) + " ");
-                j++;
-            }
+                System.out.print(i * (j++) + " ");
 
+            }
             System.out.println();
             i++;
         }

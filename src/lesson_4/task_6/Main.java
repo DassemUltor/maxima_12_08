@@ -1,6 +1,5 @@
 package lesson_4.task_6;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
@@ -11,16 +10,19 @@ public class Main {
     public static void main(String[] args) {
 
         String name;
-        String birthDate;
 
         Scanner console = new Scanner(System.in);
         System.out.print("Enter your name: ");
         name = console.nextLine();
-        System.out.print("Enter your birthDate(d.m.y): ");
-        birthDate = console.nextLine();
+        System.out.print("Enter your birthDate(day): ");
+        int dayBirth = console.nextInt();
+        System.out.print("Enter your birthDate(month): ");
+        int monthBirth = console.nextInt();
+        System.out.print("Enter your birthDate(year): ");
+        int yearBirth = console.nextInt();
 
-        System.out.println("My name is " + name);
-        System.out.println("I was born " + birthDate);
+        System.out.printf("My name is: %s %n I was born: %d.%d.%d ", name, dayBirth, monthBirth, yearBirth);
+
 
         console.close();
     }
