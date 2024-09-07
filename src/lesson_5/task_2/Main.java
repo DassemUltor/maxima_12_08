@@ -11,21 +11,14 @@ public class Main {
     public static void main(String[] args) {
 
         var array = new int[10];
-        int max = 0;
-        boolean flag = true;
-        int counter = 0;
-        Scanner console = new Scanner(System.in);
+        int max = Integer.MIN_VALUE;
+        var console = new Scanner(System.in);
 
-        while (flag) {
-            if (counter == array.length) {
-                flag = false;
-            } else {
-                System.out.print("Enter numbers: ");
-                array[counter] = console.nextInt();
-                if (array[counter] > max) {
-                    max = array[counter];
-                }
-                counter++;
+        System.out.print("Enter numbers: ");
+        for (int i = 0; i < array.length; i++) {
+            array[i] = console.nextInt();
+            if (array[i] > max) {
+                max = array[i];
             }
         }
         console.close();

@@ -10,19 +10,12 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Scanner console = new Scanner(System.in);
+        var console = new Scanner(System.in);
         var array = new String[10];
-        boolean flag = true;
-        int counter = 0;
 
-        while (flag) {
-            if (counter == 8) {
-                flag = false;
-            } else {
-                System.out.print("Enter lines: ");
-                array[counter] = console.nextLine();
-                counter++;
-            }
+        System.out.print("Enter lines: ");
+        for (int i = 0; i < 8; i++) {
+            array[i] = console.nextLine();
         }
 
         for (int i = array.length - 1; i >= 0; i--) {

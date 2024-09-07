@@ -16,19 +16,13 @@ public class Main {
 
         var arrayLines = new String[10];
         var arrayNumbers = new int[10];
-        Scanner console = new Scanner(System.in);
-        boolean flag = true;
-        int counter = 0;
+        var console = new Scanner(System.in);
 
-        while (flag) {
-            if (counter == arrayLines.length) {
-                flag = false;
-            } else {
-                System.out.print("Enter lines: ");
-                arrayLines[counter] = console.nextLine();
-                arrayNumbers[counter] = arrayLines[counter].length();
-                counter++;
-            }
+        System.out.print("Enter lines: ");
+        for (int i = 0; i < arrayLines.length; i++) {
+            arrayLines[i] = console.nextLine();
+            arrayNumbers[i] = arrayLines[i].length();
+
         }
         console.close();
         System.out.println(Arrays.toString(arrayNumbers));

@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args) {
 
         var array = new int[20];
-        Scanner console = new Scanner(System.in);
+        var console = new Scanner(System.in);
 
         System.out.println("Enter 20 numbers: ");
         for (int i = 0; i < array.length; i++) {

@@ -13,7 +13,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Scanner console = new Scanner(System.in);
+        var console = new Scanner(System.in);
 
         var largeArray = new int[20];
         var smallArray1 = new int[10];
@@ -22,15 +22,13 @@ public class Main {
         System.out.println("Enter 20 numbers: ");
         for (int i = 0; i < largeArray.length; i++) {
             largeArray[i] = console.nextInt();
-        }
-
-        for (int i = 0; i < largeArray.length; i++) {
             if (i < 10) {
                 smallArray1[i] = largeArray[i];
             } else {
                 smallArray2[i - 10] = largeArray[i];
             }
         }
+
 
         System.out.println("Small Array2: ");
         for (int num : smallArray2) {

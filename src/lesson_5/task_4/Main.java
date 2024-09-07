@@ -11,19 +11,13 @@ public class Main {
     public static void main(String[] args) {
 
         var array = new int[10];
-        boolean flag = true;
-        int counter = 0;
-        Scanner console = new Scanner(System.in);
+        var console = new Scanner(System.in);
 
-        while (flag) {
-            if (counter == array.length) {
-                flag = false;
-            } else {
-                System.out.print("Enter numbers: ");
-                array[counter] = console.nextInt();
-                counter++;
-            }
+        System.out.print("Enter numbers: ");
+        for (int i = 0; i < array.length; i++) {
+            array[i] = console.nextInt();
         }
+
 
         for (int i = array.length - 1; i >= 0; i--) {
             System.out.println(array[i]);
