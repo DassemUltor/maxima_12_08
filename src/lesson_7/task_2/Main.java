@@ -9,15 +9,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        contrast(7);
+        System.out.println(contrast(7));
 
     }
 
-    public static void contrast(int n) {
-        if (n > 5) {
-            System.out.println(true);
-        } else {
-            System.out.println(false);
-        }
+    public static boolean contrast(int n) {
+        return n > 5;
     }
 }

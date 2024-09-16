@@ -17,24 +17,24 @@ public class Main {
  */
 
     public static void main(String[] args) {
-
-        int num1 = getInt();
-        int num2 = getInt();
-        char operation = getOperation();
+        Scanner console = new Scanner(System.in);
+        int num1 = getInt(console);
+        int num2 = getInt(console);
+        char operation = getOperation(console);
 
         double result = calc(num1, num2, operation);
         System.out.println("Result: " + result);
 
+        console.close();
+
     }
 
-    public static int getInt() {
-        Scanner console = new Scanner(System.in);
+    public static int getInt(Scanner scanner) {
         System.out.println("Enter integer number: ");
-        return console.nextInt();
+        return scanner.nextInt();
     }
 
-    public static char getOperation() {
-        Scanner scanner = new Scanner(System.in);
+    public static char getOperation(Scanner scanner) {
         System.out.println("Enter operation (+, -, *, /): ");
         return scanner.next().charAt(0);
     }
@@ -48,10 +48,13 @@ public class Main {
             case '*':
                 return num1 * num2;
             case '/':
-                return (double) num1 / num2;
+                if (num2 != 0) {
+                    return (double)num1 / num2;
+                } else {
+                    throw new ArithmeticException("Divide by zero");
+                }
             default:
-                System.out.println("Invalid operation");
-                return 0;
+                throw new IllegalArgumentException("Invalid operation " + operation);
         }
 
     }
