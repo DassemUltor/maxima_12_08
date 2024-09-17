@@ -1,6 +1,5 @@
 package lesson_6.task_5;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -18,20 +17,19 @@ public class Main {
         for (int i = 0; i < 6; i++) {
             stringArray[i] = console.nextLine();
         }
-        var temp = Arrays.copyOf(stringArray, stringArray.length);
+
         for (int i = 0; i < stringArray.length; i++) {
             if (stringArray[i] == null) {
                 continue;
             }
+            String temp = stringArray[i];
             for (int j = i + 1; j < stringArray.length; j++) {
                 if (stringArray[i].equals(stringArray[j])) {
                     stringArray[j] = null;
-                    temp[i] = null;
+                    temp = null;
                 }
             }
-            if (temp[i] == null) {
-                stringArray[i] = null;
-            }
+            stringArray[i] = temp;
 
         }
 
