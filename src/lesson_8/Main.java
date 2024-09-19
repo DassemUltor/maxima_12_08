@@ -1,6 +1,5 @@
 package lesson_8;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
@@ -19,11 +18,13 @@ public class Main {
         Human h8 = new Human("Andrey", 16, true, h5, h6);
         Human h9 = new Human("Katty", 14, false, h5, h6);
 
-        List<Human> family = new ArrayList<>(List.of(h1, h2, h3, h4, h5, h6, h7, h8, h9));
+
+        List<Human> family = List.of(h1, h2, h3, h4, h5, h6, h7, h8, h9);
 
 
         for (Human human : family) {
-            System.out.println(human);
+            human.printInfo();
         }
+
     }
 }

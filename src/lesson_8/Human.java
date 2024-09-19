@@ -21,15 +21,13 @@ public class Human {
     }
 
 
-    @Override
-    public String toString() {
-        return "Human{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", sex=" + (sex ? "man" : "woman") +
-                ", father=" + father +
-                ", mother=" + mother +
-                '}';
+    public void printInfo() {
+        String fatherName = ((father == null) ? "unkown" : father.name);
+        String motherName = ((mother == null) ? "unkown" : mother.name);
+        String sexString = (sex ? "man" : "woman");
+        System.out.printf("Name: %s, age: %d, sex: %s, father: %s, mother: %s " +
+                "\n", name, age, sexString, fatherName, motherName);
+
     }
 }
 
