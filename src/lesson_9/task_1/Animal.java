@@ -3,8 +3,8 @@ package lesson_9.task_1;
 abstract class Animal {
 
 
-    String food;
-    String location;
+    protected String food;
+    protected String location;
 
     protected Animal(String food, String location) {
         this.food = food;

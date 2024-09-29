@@ -1,14 +1,14 @@
 package lesson_9.task_2;
 
-import java.util.List;
 
-public class Product {
+public class Product extends Category {
 
     private String nameProduct;
     private double price;
     private double raiting;
 
-    public Product(String nameProduct, double price, double raiting) {
+    public Product(String categoryName, String nameProduct, double price, double raiting) {
+        super(categoryName);
         this.nameProduct = nameProduct;
         this.price = price;
         this.raiting = raiting;

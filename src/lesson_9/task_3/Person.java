@@ -5,11 +5,11 @@ public class Person {
     private int age;
 
     public void move() {
-        System.out.println(fullName + " is moving");
+        System.out.println(fullName == null ? ("Person is moving") : (fullName + " is moving"));
     }
 
     public void talk() {
-        System.out.println(fullName + " is talking ");
+        System.out.println(fullName == null ? ("Person is talking") : (fullName + " is talking"));
     }
 
     public Person() {

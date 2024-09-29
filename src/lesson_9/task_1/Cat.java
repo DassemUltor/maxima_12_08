@@ -1,7 +1,7 @@
 package lesson_9.task_1;
 
 public class Cat extends Animal {
-    String name;
+    private String name;
 
     public Cat(String food, String location, String name) {
         super(food, location);
@@ -16,5 +16,9 @@ public class Cat extends Animal {
     @Override
     public void eat() {
         System.out.println("Cat is eating");
+    }
+
+    public String getName() {
+        return name;
     }
 }

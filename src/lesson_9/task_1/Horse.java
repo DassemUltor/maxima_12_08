@@ -1,7 +1,7 @@
 package lesson_9.task_1;
 
 public class Horse extends Animal {
-    String hairyCoat;
+    private String hairyCoat;
 
     public Horse(String food, String location, String hairyCoat) {
         super(food, location);
@@ -18,5 +18,7 @@ public class Horse extends Animal {
         System.out.println("Horse is eating ");
     }
 
-
+    public String getHairyCoat() {
+        return hairyCoat;
+    }
 }

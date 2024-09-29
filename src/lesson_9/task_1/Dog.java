@@ -2,7 +2,7 @@ package lesson_9.task_1;
 
 public class Dog extends Animal {
 
-    String breed;
+    private String breed;
 
     public Dog(String food, String location, String breed) {
         super(food, location);
@@ -19,4 +19,7 @@ public class Dog extends Animal {
         System.out.println("Dog is eating");
     }
 
+    public String getBreed() {
+        return breed;
+    }
 }

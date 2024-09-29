@@ -1,14 +1,18 @@
 package lesson_9.task_2;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Category {
     protected String categoryName;
-    protected List<Product> products;
+    protected List<Product> productList;
 
-    public Category(String name, List<Product> products) {
+    public Category(String name) {
         this.categoryName = name;
-        this.products = products;
+        this.productList = new ArrayList<>();
     }
 
+    public String getCategoryName() {
+        return categoryName;
+    }
 }
