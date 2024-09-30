@@ -1,14 +1,13 @@
 package lesson_9.task_2;
 
 
-public class Product extends Category {
+public class Product {
 
     private String nameProduct;
     private double price;
     private double raiting;
 
-    public Product(String categoryName, String nameProduct, double price, double raiting) {
-        super(categoryName);
+    public Product(String nameProduct, double price, double raiting) {
         this.nameProduct = nameProduct;
         this.price = price;
         this.raiting = raiting;

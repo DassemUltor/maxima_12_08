@@ -6,31 +6,23 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Category vegetable = new Category("vegetables");
-        Category fruits = new Category("fruits");
+        Product veg1 = new Product("potatoes", 45.60, 4.8);
+        Product veg2 = new Product("carrots", 15.90, 4.7);
+        Product veg3 = new Product("onions", 35.60, 4.3);
 
-        Product veg1 = new Product("vegetable", "potatoes", 45.60, 4.8);
-        Product veg2 = new Product("vegetable", "carrots", 15.90, 4.7);
-        Product veg3 = new Product("vegetable", "onions", 35.60, 4.3);
+        Product fruit1 = new Product("apple", 135.70, 4.9);
+        Product fruit2 = new Product("banana", 127.60, 4.4);
+        Product fruit3 = new Product("orange", 150.00, 3.9);
 
-        vegetable.productList.add(veg1);
-        vegetable.productList.add(veg2);
-        vegetable.productList.add(veg3);
+        List<Product> vegetableList = List.of(veg1, veg2, veg3);
+        List<Product> fruitList = List.of(fruit1, fruit2, fruit3);
 
-        Product fruit1 = new Product("fruit", "apple", 135.70, 4.9);
-        Product fruit2 = new Product("fruit", "banana", 127.60, 4.4);
-        Product fruit3 = new Product("fruit", "orange", 150.00, 3.9);
+        Category vegetables = new Category("vegetables", vegetableList);
+        Category fruits = new Category("fruits", fruitList);
 
-        fruits.productList.add(fruit1);
-        fruits.productList.add(fruit2);
-        fruits.productList.add(fruit3);
+        List<Product> products = List.of(veg1, veg2, fruit3, fruit2);
 
-
-        List<Product> products = List.of(veg1, fruit2, veg3);
-
-        Basket basket = new Basket(products);
-
-        User user = new User("user@mail.com", "qwerty", basket);
+        User user = new User("user@mail.com", "qwerty", new Basket(products));
 
         System.out.println(user);
 
