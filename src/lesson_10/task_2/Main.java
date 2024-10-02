@@ -16,13 +16,13 @@ public class Main {
         }
         String maxLenght = list.getFirst();
         for (String s : list) {
-            if (s.length() > maxLenght.length()) {
-                maxLenght = s;
+            if (s.length() > maxLength.length()) {
+                maxLength = s;
             }
         }
 
         for (String s : list) {
-            if (s.length() == maxLenght.length()) {
+            if (s.length() == maxLength.length()) {
                 System.out.println("Longest string - " + s);
             }
         }
