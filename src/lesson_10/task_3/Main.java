@@ -13,16 +13,16 @@ public class Main {
         while (list.size() < 5) {
             list.add(console.nextLine());
         }
-        String minLenght = list.getFirst();
+        String minLength = list.getFirst();
 
         for (String s : list) {
-            if (s.length() < minLenght.length()) {
+            if (s.length() < minLength.length()) {
                 minLenght = s;
             }
         }
 
         for (String s : list) {
-            if (s.length() == minLenght.length()) {
+            if (s.length() == minLength.length()) {
                 System.out.println("Shortest string - " + s);
             }
         }
