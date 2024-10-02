@@ -14,7 +14,7 @@ public class Main {
         while (list.size() < 5) {
             list.add(console.nextLine());
         }
-        String maxLenght = list.getFirst();
+        String maxLength = list.getFirst();
         for (String s : list) {
             if (s.length() > maxLength.length()) {
                 maxLength = s;
