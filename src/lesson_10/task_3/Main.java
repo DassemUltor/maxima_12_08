@@ -17,7 +17,7 @@ public class Main {
 
         for (String s : list) {
             if (s.length() < minLength.length()) {
-                minLenght = s;
+                minLength = s;
             }
         }
 
