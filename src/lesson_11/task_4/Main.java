@@ -40,7 +40,6 @@ public class Main {
         while (headNumbers.size() < 20) {
             headNumbers.add(console.nextInt());
         }
-        long startTime = System.nanoTime();
         for (int number : headNumbers) {
             if (number % 3 == 0) {
                 divisibleBy3.add(number);
@@ -52,9 +51,6 @@ public class Main {
                 otherNumbers.add(number);
             }
         }
-        long finishTime = System.nanoTime();
-        long elapsed = (finishTime - startTime) / 1000;
-        System.out.println("operating time: " + elapsed + " milliseconds");
 
     }
 
