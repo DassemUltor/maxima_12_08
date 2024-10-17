@@ -30,6 +30,8 @@ public class Main {
 
         if (map.containsKey(month)) {
             System.out.printf("%s is the %d month", month, map.get(month));
+        } else {
+            System.out.println("Invalid month");
         }
 
         console.close();

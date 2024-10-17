@@ -15,13 +15,14 @@ public class Main {
         map.put(4, "Sidorov family");
         map.put(5, "Melnikov family");
 
-        switch (console.nextInt()) {
-            case 1 -> System.out.println(map.get(1));
-            case 2 -> System.out.println(map.get(2));
-            case 3 -> System.out.println(map.get(3));
-            case 4 -> System.out.println(map.get(4));
-            case 5 -> System.out.println(map.get(5));
-            default -> System.out.println("This house number does not exist");
+
+        System.out.println("Enter number of house:");
+        Integer keyHouse = console.nextInt();
+
+        if (map.containsKey(keyHouse)) {
+            System.out.println(map.get(keyHouse));
+        } else {
+            System.out.println("Invalid key");
         }
 
         console.close();
