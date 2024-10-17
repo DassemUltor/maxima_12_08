@@ -7,7 +7,8 @@ public class Main {
 
     public static List<String> fix(List<String> list) {
 
-        list = list.stream().filter(str -> !str.contains("р")
+        return list.stream()
+                .filter(str -> !str.contains("р")
                         || str.contains("л"))
                 .map(str -> {
                     if (str.contains("л")
@@ -17,7 +18,6 @@ public class Main {
                     return str;
                 })
                 .toList();
-        return list;
     }
 
 

@@ -10,8 +10,10 @@ public class Main {
 
     public static List<String> doubleValues(List<String> list) {
 
-        list = list.stream().flatMap(str -> Stream.of(str, str)).toList();
-        return list;
+
+        return list.stream()
+                .flatMap(str -> Stream.of(str, str))
+                .toList();
     }
 
     public static void main(String[] args) {

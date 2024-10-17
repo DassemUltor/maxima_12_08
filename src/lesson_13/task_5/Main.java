@@ -5,9 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-//    1. Введи с клавиатуры 10 слов в список строк.
-//2. Определить, является ли список упорядоченным по возрастанию длины строки.
-//3. В случае отрицательного ответа вывести на экран индекс первого элемента, нарушающего такую упорядоченность.
+
 
     public static void checks(List<String> list) {
         boolean isOrdered = true;
